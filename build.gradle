@@ -7,6 +7,10 @@ plugins {
     id 'java'
 }
 
+springBoot {
+    buildInfo()
+}
+
 repositories {
     mavenCentral()
 }
@@ -42,9 +46,7 @@ test.environment([
         "MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE": "*"
 ])
 
-springBoot {
-    buildInfo()
-}
+
 
 flyway {
     url = developmentDbUrl
