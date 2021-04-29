@@ -19,6 +19,7 @@ public class EnvController {
     public EnvController(@Value("${port:NOT SET}")String port, @Value("${memory.limit:NOT SET}")String memoryLimit, @Value("${cf.instance.index:NOT SET}")String instanceNumber, @Value("${cf.instance.address:NOT SET}")String instanceAddress){
         environmentMap = new HashMap<>();
 
+
         environmentMap.put(PORT,port);
         environmentMap.put(MEMORY_LIMIT,memoryLimit);
         environmentMap.put(CF_INSTANCE_INDEX,instanceNumber);
